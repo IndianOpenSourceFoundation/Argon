@@ -1,12 +1,26 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
 
-<h2>Sign up</h2>
+
+
+		<h1 align="center">Sign up</h1>
+
 <form method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
-	<button type="submit">Sign up</button>
+
+<p><label for="email">Email:</label><input type="email" name="email"></p> <!––we created this field––>
+
+<p><label for="first_name">First name:</label><input type="text" name="first_name"></p> <!––we created this field––><!––we created this field––>
+
+<p><label for="last_name">Last name:</label><input type="text" name="last_name"></p><!––we created this field––>
+
+
+	<p align="center"><button type="submit">Sign up</button></p>
 </form>
+	
+
 
 {% endblock content %}
